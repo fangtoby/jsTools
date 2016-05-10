@@ -1,0 +1,8 @@
+.*
+!.gitignore
+/node_modules
+/resize
+/ksy
+/temp
+/upload
+/include/config/deployOnline.php
