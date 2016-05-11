@@ -1,0 +1,28 @@
+{
+  "name": "yiban",
+  "homepage": "https://github.com/fangtoby/jsTools",
+  "authors": [
+    "fangtoby <fangtoby@live.cn>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iCheck": "icheck#^1.0.2",
+    "react": "^15.0.2",
+    "seajs-css": "*",
+    "seajs-text": "^1.1.1",
+    "seajs-wrap": "^1.0.2",
+    "seajs": "^3.0.0"
+  },
+  "devDependencies": {
+    "jsx-requirejs-plugin": "^0.6.2"
+  }
+}
