@@ -27,7 +27,7 @@ gulp.task('browser-sync', function() {
 });
 
 //less编译
-gulp.task('watch',[/*'browser-sync'*/], function () {
+gulp.task('watch',['browser-sync'], function () {
 
     gulp.watch(['assets/css/**/*.less'], function (event) {
         return gulp
@@ -36,10 +36,10 @@ gulp.task('watch',[/*'browser-sync'*/], function () {
             })
             .pipe(gulpLess())
             .pipe(autoprefix('last 2 version', 'ie 8', 'ie 9'))
-            //.pipe(minifyCss())
+            .pipe(minifyCss())
             .pipe(gulp.dest('./public'))
             .pipe(notify({ message: 'path->'+event.path }))
             .pipe(notify({ message: 'Less task complete' }))
-           // .pipe(reload({stream: true}));
+            .pipe(reload({stream: true}));
     });
 });

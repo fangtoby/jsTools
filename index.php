@@ -28,7 +28,7 @@ date_default_timezone_set('UTC');
 <div class="wrap">
     <div class="frame">
         <div class="frame-msg">
-            <span>Framework Make. </span>
+            <span>Framework Make....</span>
         </div>
     </div>
 </div>
