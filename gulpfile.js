@@ -12,14 +12,32 @@ var autoprefix = require('gulp-autoprefixer');
 
 var reload   = browserSync.reload;
 
+var gutil = require('gulp-util')
+
+var webpack = require('webpack')
+
+var webpackConfig = require('./webpack.config.js')
+
+
+
 var log = function (msg) {
     console.log(msg)
 }
+
+//webpack
+
+gulp.task('webpack',function(callback){
+	var myConfig = Object.create(webpackConfig)
+	webpack(myConfig,function(err,status){
+		callback && callback()
+	})
+});
+
 // Domain server
 
 gulp.task('default',['watch'])
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync',['webpack'], function() {
    browserSync.init({
        proxy: "www.yiban.dev"
        //server: "./"
@@ -29,7 +47,7 @@ gulp.task('browser-sync', function() {
 //less编译
 gulp.task('watch',['browser-sync'], function () {
 
-    gulp.watch(['assets/css/**/*.less'], function (event) {
+    gulp.watch(['assets/css/**/*.less'],['webpack'], function (event) {
         return gulp
             .src(['assets/css/[^(_)]**/[^(_)]*.less'], {
                 base: './assets'
@@ -41,5 +59,6 @@ gulp.task('watch',['browser-sync'], function () {
             .pipe(notify({ message: 'path->'+event.path }))
             .pipe(notify({ message: 'Less task complete' }))
             .pipe(reload({stream: true}));
+
     });
 });

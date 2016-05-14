@@ -4,7 +4,7 @@ require('./demo.png');
 
 import People from './js/es6/People';
 
-let p = new People('Yimiki',20);
+let p = new People('no1001.cc',20);
 
 console.log( p.say() );
 
