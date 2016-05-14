@@ -1,7 +1,7 @@
 {
   "name": "yiban",
   "version": "1.0.0",
-  "description": "",
+  "description": "WebPack Enginer Dev",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.12.5",
@@ -19,7 +19,23 @@
     "nginx": "^0.0.0"
   },
   "devDependencies": {
-    "babel-loader": "^6.2.4"
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.10.0",
+    "file-loader": "^0.8.5",
+    "image-webpack-loader": "^1.8.0",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.7.0",
+    "react": "^15.0.2",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^2.4.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
