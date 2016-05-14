@@ -27,15 +27,18 @@ module.exports = {
 		},{
 			//test: /\.(png|jpg)$/,
 			test: /\.(png|jpg)$/, 
-			loader: 'url-loader?limit=8192' // inline base64 URLs for <=8k images, direct URLs for the rest
+			// inline base64 URLs for <=8k images, direct URLs for the rest
+			loader: 'url-loader?limit=8192'
 			/*loaders: [
 				'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            			'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            	'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
 			]*/
 		},{
 			test: /\.js$/,
 			loader: "babel",
-			query: {presets:['es2015']}
+			query: {
+                presets:['es2015']
+            }
 		}]
 	}
 }
