@@ -22,11 +22,11 @@ export default {
 		filename: '[name].js'	
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
+/*		new webpack.optimize.UglifyJsPlugin({
 			compressor:{
 				warnings: false	
 			}
-		}),
+		}),*/
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
 			name:'common',
@@ -53,7 +53,7 @@ export default {
 			test: /\.js$/,
 			loader: 'babel',
 			query: {
-                presets:['es2015']
+                presets:['react','es2015']
             }
 		}]
 	}
